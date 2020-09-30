@@ -23,8 +23,6 @@ namespace GameBarWidget
             set => SetField(ref _tiers, value);
         }
 
-        public int RankColWidth = 42;
-
         // -------------------------
 
         public event PropertyChangedEventHandler PropertyChanged;
