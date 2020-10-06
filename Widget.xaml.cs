@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Windows.UI;
@@ -26,6 +27,7 @@ namespace GameBarWidget
         private void FetchData()
         {
             _apiResponse = GW2API.FetchData();
+            ViewModel.LastRefresh = DateTime.Now;
         }
 
         private void Repaint()

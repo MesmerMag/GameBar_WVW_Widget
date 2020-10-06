@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using GameBarWidget.Model;
@@ -8,8 +9,8 @@ namespace GameBarWidget
     public class WidgetViewModel : INotifyPropertyChanged
     {
         private string _region = "";
-
         private List<Tier> _tiers = new List<Tier>();
+        private DateTime _lastRefresh;
 
         public string Region
         {
@@ -21,6 +22,12 @@ namespace GameBarWidget
         {
             get => _tiers;
             set => SetField(ref _tiers, value);
+        }
+
+        public DateTime LastRefresh
+        {
+            get => _lastRefresh;
+            set => SetField(ref _lastRefresh, value);
         }
 
         // -------------------------
