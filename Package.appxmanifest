@@ -8,15 +8,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="0ea869d3-b84b-4a11-bb09-b1d8eb51cb3d"
-    Publisher="CN=MesmerMag"
-    Version="1.0.10.0" />
+    Name="53682MesmerMag.MesmerMagsWVWGameBarWidget"
+    Publisher="CN=D2A043A6-AD1B-43DF-ABD4-7E727DCF54D6"
+    Version="1.0.14.0" />
 
-  <mp:PhoneIdentity PhoneProductId="0ea869d3-b84b-4a11-bb09-b1d8eb51cb3d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="8064aa09-dc50-4df8-82ff-8637e0d193fa" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Mesmer Mag's WVW Widget</DisplayName>
-    <PublisherDisplayName>Mesmer Mag</PublisherDisplayName>
+    <DisplayName>Mesmer Mag&apos;s WVW Game Bar Widget</DisplayName>
+    <PublisherDisplayName>MesmerMag</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -33,7 +33,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="GameBarWidget.App">
       <uap:VisualElements
-        DisplayName="Mesmer Mag&apos;s WVW Widget"
+        DisplayName="Mesmer Mag&apos;s WVW Game Bar Widget"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Widget that displays GW2 WVW Stats"

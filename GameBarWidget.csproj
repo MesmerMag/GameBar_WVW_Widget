@@ -24,9 +24,11 @@
     <AppxBundle>Auto</AppxBundle>
     <AppxBundlePlatforms>x64</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-    <PackageCertificateKeyFile>GameBarWidget_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>
+    </PackageCertificateKeyFile>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
     <AppxSymbolPackageEnabled>True</AppxSymbolPackageEnabled>
+    <PackageCertificateThumbprint>B09A10882ADFCED6DF0C18B2403B1012D6CC3546</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -187,6 +189,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
