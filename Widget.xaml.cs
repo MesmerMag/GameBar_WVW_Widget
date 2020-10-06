@@ -80,6 +80,28 @@ namespace GameBarWidget
                 var nextTier = tiers.ElementAtOrDefault(tierIdx + 1);
                 var isLastTier = tier == tiers.LastOrDefault();
 
+                var server1 = tier.Servers.ElementAtOrDefault(0);
+                var server2 = tier.Servers.ElementAtOrDefault(1);
+                var server3 = tier.Servers.ElementAtOrDefault(2);
+                if (server1 != null && server2 != null && server3 != null)
+                {
+                    if (server1.MinVP > server2.MaxVP)
+                    {
+                        server1.Locked = true;
+                    }
+
+                    if (server2.MaxVP < server1.MinVP && server2.MinVP > server3.MaxVP)
+                    {
+                        server2.Locked = true;
+                    }
+
+                    if (server3.MaxVP < server2.MinVP)
+                    {
+                        server3.Locked = true;
+                    }
+                }
+
+                // Figure out next matchup:
                 for (var serverIdx = 0; serverIdx < tier.Servers.Count; serverIdx++)
                 {
                     var server = tier.Servers[serverIdx];
@@ -89,30 +111,8 @@ namespace GameBarWidget
                         continue;
                     }
 
-                    var prevServer = tier.Servers.ElementAtOrDefault(serverIdx - 1);
                     var nextServer = tier.Servers.ElementAtOrDefault(serverIdx + 1);
                     var nextServer2 = tier.Servers.ElementAtOrDefault(serverIdx + 2);
-
-                    // Figure out if positions are locked:
-
-                    var locked = false;
-
-                    if (prevServer != null && nextServer != null && server.MinVP > nextServer.MaxVP && server.MaxVP < prevServer.MinVP)
-                    {
-                        locked = true;
-                    }
-                    else if (prevServer != null && server.MaxVP < prevServer.MinVP)
-                    {
-                        locked = true;
-                    }
-                    else if (nextServer != null && server.MinVP > nextServer.MaxVP)
-                    {
-                        locked = true;
-                    }
-
-                    server.Locked = locked;
-
-                    // Figure out next matchup:
 
                     var isLosingServer = server == tier.Servers.LastOrDefault();
 
