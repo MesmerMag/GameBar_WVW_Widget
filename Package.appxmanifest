@@ -10,7 +10,7 @@
   <Identity
     Name="53682MesmerMag.MesmerMagsWVWGameBarWidget"
     Publisher="CN=D2A043A6-AD1B-43DF-ABD4-7E727DCF54D6"
-    Version="1.0.22.0" />
+    Version="1.0.35.0" />
 
   <mp:PhoneIdentity PhoneProductId="9a6c1879-39bb-4f71-b637-d680362d6a1f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -22,6 +22,7 @@
 
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+    <PackageDependency Name="Microsoft.VCLibs.140.00.UWPDesktop" MinVersion="14.0.27810.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
 
   <Resources>
@@ -40,7 +41,7 @@
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="WVW Widget" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
         </uap:DefaultTile >
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png"  BackgroundColor="#6200EE"/>
         <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge"/>
       </uap:VisualElements>
       <Extensions>

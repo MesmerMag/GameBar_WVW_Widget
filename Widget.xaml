@@ -55,20 +55,19 @@
                     <DataTemplate x:DataType="models:Tier">
                         <StackPanel Margin="0,0,0,10">
                             <Grid x:Name="PrimaryGrid"
-                                  HorizontalAlignment="Stretch"
                                   ColumnSpacing="10"
                                   Margin="5, 2">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition x:Name="ServerCol"
-                                                      Width="2*" />
+                                    <ColumnDefinition x:Name="ServerCol" />
                                     <ColumnDefinition x:Name="LockCol"
                                                       Width="24" />
-                                    <ColumnDefinition x:Name="RankCol" />
-                                    <ColumnDefinition x:Name="VpCol" />
+                                    <ColumnDefinition x:Name="RankCol"
+                                                      Width="45" />
+                                    <ColumnDefinition x:Name="VpCol"
+                                                      Width="40" />
                                     <ColumnDefinition x:Name="ScoreCol"
-                                                      Width="1.5*" />
-                                    <ColumnDefinition x:Name="NextMatchupCol"
-                                                      Width="2*" />
+                                                      Width="75" />
+                                    <ColumnDefinition x:Name="NextMatchupCol" />
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0"
                                            Text="{x:Bind sys:String.Format('Tier {0}', TierNum)}"
@@ -113,12 +112,21 @@
                                         <Grid ColumnSpacing="10"
                                               Margin="5, 2">
                                             <Grid.ColumnDefinitions>
+                                                <!--
                                                 <ColumnDefinition Width="{Binding ElementName=PrimaryGrid, Path=ColumnDefinitions[0].Width}" />
                                                 <ColumnDefinition Width="{Binding ElementName=PrimaryGrid, Path=ColumnDefinitions[1].Width}" />
                                                 <ColumnDefinition Width="{Binding ElementName=PrimaryGrid, Path=ColumnDefinitions[2].Width}" />
                                                 <ColumnDefinition Width="{Binding ElementName=PrimaryGrid, Path=ColumnDefinitions[3].Width}" />
                                                 <ColumnDefinition Width="{Binding ElementName=PrimaryGrid, Path=ColumnDefinitions[4].Width}" />
                                                 <ColumnDefinition Width="{Binding ElementName=PrimaryGrid, Path=ColumnDefinitions[5].Width}" />
+                                                -->
+                                                <!-- The above code works in the debug build, but not release. IDK why, and I'm tired of debugging. -->
+                                                <ColumnDefinition />
+                                                <ColumnDefinition Width="24" />
+                                                <ColumnDefinition Width="45" />
+                                                <ColumnDefinition Width="40" />
+                                                <ColumnDefinition Width="75" />
+                                                <ColumnDefinition />
                                             </Grid.ColumnDefinitions>
                                             <Border Grid.Column="0"
                                                     Background="{x:Bind utils:ColorUtil.Brushify(NameBackgroundColor)}">
