@@ -10,9 +10,9 @@
   <Identity
     Name="53682MesmerMag.MesmerMagsWVWGameBarWidget"
     Publisher="CN=D2A043A6-AD1B-43DF-ABD4-7E727DCF54D6"
-    Version="1.0.14.0" />
+    Version="1.0.22.0" />
 
-  <mp:PhoneIdentity PhoneProductId="8064aa09-dc50-4df8-82ff-8637e0d193fa" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="9a6c1879-39bb-4f71-b637-d680362d6a1f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Mesmer Mag&apos;s WVW Game Bar Widget</DisplayName>
@@ -56,8 +56,8 @@
                 <PinningSupported>true</PinningSupported>
                 <Window>
                   <Size>
-                    <Height>545</Height>
-                    <Width>400</Width>
+					<Height>545</Height>
+                    <Width>495</Width>
                     <MinHeight>300</MinHeight>
                     <MinWidth>340</MinWidth>
                   </Size>
