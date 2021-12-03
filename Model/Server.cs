@@ -35,8 +35,13 @@ namespace GameBarWidget.Model
             {
                 return list.Reverse().Aggregate(
                     "",
-                    (current, id) => current + (worlds[id].Name.PadRight(25) + "\t" + worlds[id].Population + "\r\n")
-                ).Trim();
+                    (current, id) =>
+                    {
+                        if (worlds.ContainsKey(id))
+                            return current + (worlds[id].Name.PadRight(25) + "\t" + worlds[id].Population + "\r\n");
+
+                        return current + ("Unknown Server " + id).PadRight(25) + "\t ---\r\n";
+                    }).Trim();
             }
 
             var vp = ObjectUtil.GetPropertyValue<int>(match.VictoryPoints, serverColor);
