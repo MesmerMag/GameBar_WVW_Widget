@@ -10,7 +10,7 @@
   <Identity
     Name="53682MesmerMag.MesmerMagsWVWGameBarWidget"
     Publisher="CN=D2A043A6-AD1B-43DF-ABD4-7E727DCF54D6"
-    Version="1.0.36.0" />
+    Version="1.0.37.0" />
 
   <mp:PhoneIdentity PhoneProductId="9a6c1879-39bb-4f71-b637-d680362d6a1f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
